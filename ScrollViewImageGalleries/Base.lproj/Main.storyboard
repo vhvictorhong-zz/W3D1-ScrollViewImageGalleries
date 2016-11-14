@@ -66,7 +66,6 @@
                                 <constraints>
                                     <constraint firstItem="CyU-o1-yo1" firstAttribute="top" secondItem="uqX-DA-SbP" secondAttribute="top" id="2bL-1u-W4G"/>
                                     <constraint firstAttribute="trailing" secondItem="CyU-o1-yo1" secondAttribute="trailing" id="EjL-ci-U8H"/>
-                                    <constraint firstAttribute="bottom" secondItem="CyU-o1-yo1" secondAttribute="bottom" id="Qtq-aK-teG"/>
                                     <constraint firstItem="CyU-o1-yo1" firstAttribute="leading" secondItem="uqX-DA-SbP" secondAttribute="leading" id="xjy-iQ-bGx"/>
                                 </constraints>
                                 <connections>

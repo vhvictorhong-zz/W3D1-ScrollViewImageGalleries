@@ -18,6 +18,8 @@
 @property UIImageView *imageThree;
 @property NSString *selectImage;
 
+@property UIPageControl *pageControl;
+
 @end
 
 @implementation ViewController
@@ -157,6 +159,78 @@
     UITapGestureRecognizer *tapGestureThree = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(printImageTapThree)];
     
     [self.imageThree addGestureRecognizer:tapGestureThree];
+    
+    //create page control
+    self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectZero];
+    self.pageControl.translatesAutoresizingMaskIntoConstraints = NO;
+    self.pageControl.numberOfPages = 3;
+    self.pageControl.currentPage = 0;
+    [self.pageControl addTarget:self action:@selector(scrollViewPageControl) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:self.pageControl];
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.pageControl
+                                                                attribute:NSLayoutAttributeCenterX
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:self.view
+                                                                attribute:NSLayoutAttributeCenterX
+                                                               multiplier:1.0
+                                                                 constant:1.0]];
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.pageControl
+                                                                attribute:NSLayoutAttributeCenterY
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:self.view
+                                                                attribute:NSLayoutAttributeCenterY
+                                                               multiplier:1.8
+                                                                 constant:1.0]];
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.pageControl
+                                                                attribute:NSLayoutAttributeWidth
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:nil
+                                                                attribute:NSLayoutAttributeNotAnAttribute
+                                                               multiplier:1.0
+                                                                 constant:100]];
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.pageControl
+                                                                attribute:NSLayoutAttributeHeight
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:nil
+                                                                attribute:NSLayoutAttributeNotAnAttribute
+                                                               multiplier:1.0
+                                                                 constant:100]];
+    
+    
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    if (scrollView.contentOffset.y == 1096.00) {
+        self.pageControl.currentPage = 2;
+    } else if (scrollView.contentOffset.y == 548.00) {
+        self.pageControl.currentPage = 1;
+    } else if (scrollView.contentOffset.y == 0.00) {
+        self.pageControl.currentPage = 0;
+    }
+    
+}
+
+-(void)scrollViewPageControl {
+    
+    switch (self.pageControl.currentPage) {
+        case 0:
+            [self.scrollView setContentOffset:CGPointMake(0, 0)];
+            break;
+        case 1:
+            [self.scrollView setContentOffset:CGPointMake(0, 548.0)];
+            break;
+        case 2:
+            [self.scrollView setContentOffset:CGPointMake(0, 1096.0)];
+            break;
+        default:
+            break;
+    }
     
 }
 

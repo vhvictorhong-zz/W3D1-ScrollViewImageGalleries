@@ -18,11 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.imageView.image = [UIImage imageNamed:self.imageViewName];
+    
     self.scrollView.minimumZoomScale = 0.5;
     self.scrollView.maximumZoomScale = 4.0;
     self.scrollView.zoomScale = 1.0;
-    
-    self.imageView.image = [UIImage imageNamed:self.imageViewName];
+    [self updateZoom];
     
 }
 
@@ -35,6 +37,13 @@
     
     return self.imageView;
     
+}
+
+-(void)updateZoom {
+    self.scrollView.minimumZoomScale = MIN(self.scrollView.bounds.size.width / self.imageView.image.size.width, self.scrollView.bounds.size.height / self.imageView.image.size.height);
+    
+    if (self.scrollView.zoomScale < self.scrollView.minimumZoomScale)
+        self.scrollView.zoomScale = self.scrollView.minimumZoomScale;
 }
 /*
 #pragma mark - Navigation
