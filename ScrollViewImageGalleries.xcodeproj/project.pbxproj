@@ -15,6 +15,7 @@
 		2B6B9B471DDA2C540091FEAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6B9B451DDA2C540091FEAF /* LaunchScreen.storyboard */; };
 		2B6B9B521DDA2C540091FEAF /* ScrollViewImageGalleriesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B9B511DDA2C540091FEAF /* ScrollViewImageGalleriesTests.m */; };
 		2B6B9B5D1DDA2C540091FEAF /* ScrollViewImageGalleriesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B9B5C1DDA2C540091FEAF /* ScrollViewImageGalleriesUITests.m */; };
+		2B6B9B6C1DDA35640091FEAF /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B9B6B1DDA35640091FEAF /* ScrollViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		2B6B9B581DDA2C540091FEAF /* ScrollViewImageGalleriesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollViewImageGalleriesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B6B9B5C1DDA2C540091FEAF /* ScrollViewImageGalleriesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewImageGalleriesUITests.m; sourceTree = "<group>"; };
 		2B6B9B5E1DDA2C540091FEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B6B9B6A1DDA35640091FEAF /* ScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
+		2B6B9B6B1DDA35640091FEAF /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				2B6B9B3B1DDA2C540091FEAF /* AppDelegate.m */,
 				2B6B9B3D1DDA2C540091FEAF /* ViewController.h */,
 				2B6B9B3E1DDA2C540091FEAF /* ViewController.m */,
+				2B6B9B6A1DDA35640091FEAF /* ScrollViewController.h */,
+				2B6B9B6B1DDA35640091FEAF /* ScrollViewController.m */,
 				2B6B9B401DDA2C540091FEAF /* Main.storyboard */,
 				2B6B9B431DDA2C540091FEAF /* Assets.xcassets */,
 				2B6B9B451DDA2C540091FEAF /* LaunchScreen.storyboard */,
@@ -276,6 +281,7 @@
 				2B6B9B3F1DDA2C540091FEAF /* ViewController.m in Sources */,
 				2B6B9B3C1DDA2C540091FEAF /* AppDelegate.m in Sources */,
 				2B6B9B391DDA2C540091FEAF /* main.m in Sources */,
+				2B6B9B6C1DDA35640091FEAF /* ScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
