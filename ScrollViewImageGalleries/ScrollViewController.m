@@ -21,6 +21,9 @@
     self.scrollView.minimumZoomScale = 0.5;
     self.scrollView.maximumZoomScale = 4.0;
     self.scrollView.zoomScale = 1.0;
+    
+    self.imageView.image = [UIImage imageNamed:self.imageViewName];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,7 +33,7 @@
 
 -(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     
-    return self.scrollView;
+    return self.imageView;
     
 }
 /*

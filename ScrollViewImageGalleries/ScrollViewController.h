@@ -10,4 +10,7 @@
 
 @interface ScrollViewController : UIViewController <UIScrollViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property NSString *imageViewName;
+
 @end
