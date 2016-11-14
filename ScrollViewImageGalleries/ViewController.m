@@ -119,12 +119,12 @@
                                                                    toItem:self.imageTwo
                                                                 attribute:NSLayoutAttributeBottom
                                                                multiplier:1.0
-                                                                 constant:0]];
+                                                                 constant:0.0]];
     
     [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.imageThree
                                                                 attribute:NSLayoutAttributeLeadingMargin
                                                                 relatedBy:NSLayoutRelationEqual
-                                                                   toItem:self.imageTwo
+                                                                   toItem:self.scrollView
                                                                 attribute:NSLayoutAttributeLeading
                                                                multiplier:1.0
                                                                  constant:0]];
