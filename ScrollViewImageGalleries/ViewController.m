@@ -39,7 +39,105 @@
     self.imageThree.image = [UIImage imageNamed:@"Lighthouse-zoomed"];
     [self.scrollView addSubview:self.imageThree];
     
-    [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.imageOne attribute:<#(NSLayoutAttribute)#> relatedBy:<#(NSLayoutRelation)#> toItem:<#(nullable id)#> attribute:<#(NSLayoutAttribute)#> multiplier:<#(CGFloat)#> constant:<#(CGFloat)#>]]
+    //set image one constraint
+    [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.imageOne
+                                                                attribute:NSLayoutAttributeTopMargin
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:self.scrollView
+                                                                attribute:NSLayoutAttributeTop
+                                                               multiplier:1.0
+                                                                 constant:0]];
+    
+    [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.imageOne
+                                                                attribute:NSLayoutAttributeLeadingMargin
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:self.scrollView
+                                                                attribute:NSLayoutAttributeLeading
+                                                               multiplier:1.0
+                                                                 constant:0]];
+    
+    [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.imageOne
+                                                                attribute:NSLayoutAttributeWidth
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:nil
+                                                                attribute:NSLayoutAttributeNotAnAttribute
+                                                               multiplier:1.0
+                                                                 constant:self.view.bounds.size.width]];
+    
+    [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.imageOne
+                                                                attribute:NSLayoutAttributeHeight
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:nil
+                                                                attribute:NSLayoutAttributeNotAnAttribute
+                                                               multiplier:1.0
+                                                                 constant:self.view.bounds.size.height]];
+    
+    //Set image two constraint
+    [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.imageTwo
+                                                                attribute:NSLayoutAttributeTopMargin
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:self.imageOne
+                                                                attribute:NSLayoutAttributeBottom
+                                                               multiplier:1.0
+                                                                 constant:0]];
+    
+    [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.imageTwo
+                                                                attribute:NSLayoutAttributeLeadingMargin
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:self.scrollView
+                                                                attribute:NSLayoutAttributeLeading
+                                                               multiplier:1.0
+                                                                 constant:0]];
+    
+    [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.imageTwo
+                                                                attribute:NSLayoutAttributeWidth
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:nil
+                                                                attribute:NSLayoutAttributeNotAnAttribute
+                                                               multiplier:1.0
+                                                                 constant:self.view.bounds.size.width]];
+    
+    [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.imageTwo
+                                                                attribute:NSLayoutAttributeHeight
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:nil
+                                                                attribute:NSLayoutAttributeNotAnAttribute
+                                                               multiplier:1.0
+                                                                 constant:self.view.bounds.size.height]];
+    
+    //Set image three constraint
+    [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.imageThree
+                                                                attribute:NSLayoutAttributeTopMargin
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:self.imageTwo
+                                                                attribute:NSLayoutAttributeBottom
+                                                               multiplier:1.0
+                                                                 constant:0]];
+    
+    [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.imageThree
+                                                                attribute:NSLayoutAttributeLeadingMargin
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:self.imageTwo
+                                                                attribute:NSLayoutAttributeLeading
+                                                               multiplier:1.0
+                                                                 constant:0]];
+    
+    [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.imageThree
+                                                                attribute:NSLayoutAttributeWidth
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:nil
+                                                                attribute:NSLayoutAttributeNotAnAttribute
+                                                               multiplier:1.0
+                                                                 constant:self.view.bounds.size.width]];
+    
+    [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.imageThree
+                                                                attribute:NSLayoutAttributeHeight
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:nil
+                                                                attribute:NSLayoutAttributeNotAnAttribute
+                                                               multiplier:1.0
+                                                                 constant:self.view.bounds.size.height]];
+    
 }
 
 
